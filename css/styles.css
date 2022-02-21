@@ -348,6 +348,48 @@ footer {
 }
 
 /**************** BEGIN Desktop Styles ****************/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 680px) {
+  header {
+    grid-template-columns: 1fr max-content;
+    /* align-items: center; */
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .hamburger-menu__img {
+    display: none;
+  }
+  #hamburger-menu__nav {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    color: var(--color-secondary-medium);
+    letter-spacing: 1px;
+  }
+  #hamburger-menu__nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    place-items: center;
+    width: min-content;
+  }
+  #hamburger-menu__nav li {
+    width: max-content;
+    margin: 0 1em;
+    color: var(--color-secondary-medium);
+  }
+  #hamburger-menu__nav li:hover {
+    cursor: pointer;
+    color: var(--color-primary-dark);
+  }
+  #hamburger-menu__nav li:last-of-type {
+    color: var(--color-primary-dark);
+    padding: 0.65em 2em;
+    border: 2px solid var(--color-primary-dark);
+  }
+  #hamburger-menu__nav li:last-of-type:hover {
+    color: var(--color-secondary-light);
+    background-color: var(--color-primary-dark);
+  }
 }
 /**************** END Desktop Styles ****************/
