@@ -76,7 +76,7 @@ body {
   font-family: var(--font-family-body);
   font-size: 1.6rem;
   color: var(--color-primary-dark);
-  background-color: var(--color-secondary-light);
+  background-color: var(--color-white);
 }
 
 header {
@@ -97,7 +97,7 @@ header {
   height: 32px;
   margin: 20px 20px;
   justify-self: right;
-  /* cursor: pointer; */
+  cursor: pointer;
 }
 .hamburger-menu__img--active {
   content: url(../images/icon-close.svg);
@@ -120,7 +120,7 @@ header {
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
-  color: var(--color-secondary-light);
+  color: var(--color-white);
 }
 .hamburger-menu__nav--active li {
   margin: 2em 0;
@@ -133,12 +133,12 @@ header {
   cursor: pointer;
   text-decoration: none;
   padding: 0.75em;
-  border: 2px solid var(--color-secondary-light);
+  border: 2px solid var(--color-white);
 }
 .hamburger-menu__nav--active li:last-of-type:hover {
   color: var(--color-primary-dark);
-  background-color: var(--color-secondary-light);
-  border: 2px solid var(--color-secondary-light);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-white);
 }
 
 .main-image-container {
@@ -153,7 +153,7 @@ header {
   width: 100%;
   padding: 95px 1em;
   text-align: center;
-  color: var(--color-secondary-light);
+  color: var(--color-white);
   background-color: var(--color-primary-dark);
   background-image: url(../images/bg-pattern-intro-left-mobile.svg),
     url(../images/bg-pattern-intro-right-mobile.svg);
@@ -177,7 +177,7 @@ header {
   line-height: 1.6;
 }
 .intro a {
-  border: 2px solid var(--color-secondary-light);
+  border: 2px solid var(--color-white);
   text-transform: uppercase;
   padding: 0.7em 2em;
   font-size: 1.4rem;
@@ -185,7 +185,7 @@ header {
 }
 .intro a:hover {
   cursor: pointer;
-  background-color: var(--color-secondary-light);
+  background-color: var(--color-white);
   color: var(--color-secondary-dark);
 }
 
@@ -194,7 +194,7 @@ header {
   grid-template-columns: 1fr;
   justify-items: center;
   width: 100%;
-  background-color: var(--color-secondary-light);
+  background-color: var(--color-white);
   background-image: url(../images/bg-pattern-intro-right-mobile.svg);
   background-repeat: no-repeat;
   background-position: right top -130px;
@@ -212,17 +212,21 @@ header {
   font-size: 4.8rem;
   margin-bottom: 1em;
 }
-.were-different img {
+
+.were-different__section {
+  text-align: center;
+}
+.were-different__section img {
   width: 5.5em;
   height: 5.5em;
   margin-top: 1em;
 }
-.were-different h3 {
+.were-different__section h3 {
   font-family: var(--font-family-headings);
   font-size: 2.8rem;
   margin: 1.2em auto 0.6em auto;
 }
-.were-different p {
+.were-different__section p {
   text-align: center;
   line-height: 1.6;
   color: var(--color-secondary-medium);
@@ -248,7 +252,7 @@ header {
 .find-out-more h2 {
   font-family: var(--font-family-headings);
   font-size: 4rem;
-  color: var(--color-secondary-light);
+  color: var(--color-white);
   line-height: 1;
   text-align: center;
   max-width: 13ch;
@@ -258,17 +262,17 @@ header {
   justify-self: center;
   width: max-content;
   font-size: 1.4rem;
-  color: var(--color-secondary-light);
+  color: var(--color-white);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.7em 2em;
   margin-bottom: 5em;
-  border: 2px solid var(--color-secondary-light);
+  border: 2px solid var(--color-white);
 }
 
 .find-out-more a:hover {
   cursor: pointer;
-  background-color: var(--color-secondary-light);
+  background-color: var(--color-white);
   color: var(--color-secondary-dark);
 }
 
@@ -319,7 +323,6 @@ footer {
   height: 1px;
   background-color: var(--color-tertiary);
   margin: 0 1.5em;
-  background-blend-mode: ;
 }
 
 .footer-nav {
@@ -348,12 +351,16 @@ footer {
 }
 
 /**************** BEGIN Desktop Styles ****************/
-@media screen and (min-width: 680px) {
+@media screen and (min-width: 800px) {
   header {
     grid-template-columns: 1fr max-content;
-    /* align-items: center; */
-    max-width: 1100px;
-    margin: 0 auto;
+    padding: 0 10vw;
+  }
+  .header-logo {
+    width: 115px;
+    height: auto;
+    margin-left: 0;
+    justify-self: left;
   }
   .hamburger-menu__img {
     display: none;
@@ -388,8 +395,222 @@ footer {
     border: 2px solid var(--color-primary-dark);
   }
   #hamburger-menu__nav li:last-of-type:hover {
-    color: var(--color-secondary-light);
+    color: var(--color-white);
     background-color: var(--color-primary-dark);
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .main-image-container img {
+    position: absolute;
+    display: block;
+    top: 100px;
+    right: 12vw;
+    width: 36vw;
+    z-index: 1;
+  }
+
+  .intro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    padding: 0 0 125px 0;
+    margin: 0;
+    background-image: url(../images/bg-pattern-intro-left-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom -325px;
+    position: relative;
+  }
+
+  .intro h1,
+  .intro p,
+  .intro a {
+    grid-column: 1 / 2;
+    margin-left: 10vw;
+  }
+
+  .intro h1:before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    background-color: var(--color-white);
+    margin: 100px 0 70px 0;
+  }
+  .intro h1 {
+    font-size: 7.2rem;
+    line-height: 0.9;
+  }
+  .intro p {
+    max-width: 57ch;
+    margin-top: 1em;
+  }
+  .intro a {
+    max-width: max-content;
+  }
+
+  .were-different::before {
+    position: absolute;
+    content: url(../images/bg-pattern-intro-right-desktop.svg);
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  .were-different {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: start;
+    column-gap: 2em;
+    padding: 0 10vw;
+    background-image: url(../images/bg-pattern-intro-left-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: left top -180px;
+  }
+  .were-different h2 {
+    width: 100%;
+    grid-column: 1 / 4;
+    margin-bottom: 1em;
+    font-size: 7.2rem;
+  }
+  .were-different h2::before {
+    grid-column: 1 / 4;
+    width: 150px;
+    height: 1;
+    margin-left: 0;
+    margin-top: 300px;
+  }
+  .were-different__section {
+    text-align: left;
+  }
+  .were-different__section img {
+    margin-top: 0;
+    text-align: left;
+  }
+  .were-different__section h3 {
+    text-align: left;
+  }
+
+  .were-different__section p {
+    max-width: 37ch;
+    text-align: left;
+  }
+
+  .find-out-more {
+    display: grid;
+    grid-template-areas: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7.5em 10vw 9em 10vw;
+    background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+    background-position: right -5% top 40%;
+    background-size: 45% 250%;
+  }
+  .find-out-more h2 {
+    grid-column: 1 / 2;
+    font-size: 5.6rem;
+    text-align: left;
+    max-width: 23.5ch;
+    padding: 1.2em 1.5em;
+  }
+  .find-out-more a {
+    grid-column: 2 / 3;
+    justify-self: right;
+    width: max-content;
+    margin: auto 85px;
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 4em 10vw;
+    background-color: var(--color-secondary-light);
+    background-image: url(../images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 33% 45%;
+  }
+
+  .footer-logo {
+    grid-column: 1 / 2;
+    width: 115px;
+    height: auto;
+    margin: auto auto 2em 0;
+  }
+
+  .social-nav {
+    grid-column: 2 / 3;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 2fr;
+    justify-items: end;
+    width: 100%;
+    margin: auto 0 2em auto;
+  }
+  .social-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  .social-nav::after {
+    display: none;
+  }
+
+  .footer-nav::before {
+    grid-area: hr;
+    grid-column: 1 / 5;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-tertiary);
+    margin: 0;
+  }
+  .footer-nav {
+    grid-column: 1 / 5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "hr hr hr hr"
+      "company help contact others"
+      "company-nav help-nav contact-nav others-nav";
+    width: 100%;
+  }
+
+  .footer-nav h4 {
+    margin-top: 3.2em;
+    margin-bottom: 2.5em;
+    text-align: left;
+  }
+  .footer-nav li {
+    margin: 0 auto 1.3em 0;
+    text-align: left;
+  }
+  #company {
+    grid-area: company;
+  }
+  #help {
+    grid-area: help;
+  }
+  #contact {
+    grid-area: contact;
+  }
+  #others {
+    grid-area: others;
+  }
+  .company-nav {
+    grid-area: company-nav;
+  }
+  .help-nav {
+    grid-area: help-nav;
+  }
+  .contact-nav {
+    grid-area: contact-nav;
+  }
+  .others-nav {
+    grid-area: others-nav;
   }
 }
 /**************** END Desktop Styles ****************/
