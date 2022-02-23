@@ -50,11 +50,13 @@ Desktop
 
 ### What I learned
 
-lorem
+Mobile first development may be the industry standard, but it requires a thorough review of the desktop design. Most importantly, before laying down your html foundation and plugging away at the mobile css. In this project a few simple changes to the html code that I wrote for the mobile design would have saved me a lot of effort when coding the desktop css. Perhaps the reality is desktop-first html, mobile-first css?
 
 ### Continued development
 
-ipsum
+I plan to take a much more careful look at the design requirements for everything larger than the mobile design, before committing to the html and styling the mobile css.
+
+I'd also like to start finding the right places to use either grid, flex-box, or a mixture of the two. Right now, I tend to stick with my strengths rather than really deciding which is best for the given task.
 
 ### Useful resources
 
